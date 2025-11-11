@@ -20,7 +20,7 @@ module "lambda_get" {
   function_name       = "get_coffee"
   lambda_role_arn     = module.iam.lambda_role_arn
   lambda_handler      = "index.handler"
-  lambda_runtime      = "nodejs18.x"
+  lambda_runtime      = "nodejs20.x"
   lambda_zip_path     = "${path.module}/lambda/get_coffee.zip"
   dynamodb_table_name = module.dynamodb.table_name
   environment         = var.environment
@@ -32,7 +32,7 @@ module "lambda_post" {
   function_name       = "post_coffee"
   lambda_role_arn     = module.iam.lambda_role_arn
   lambda_handler      = "index.handler"
-  lambda_runtime      = "nodejs18.x"
+  lambda_runtime      = "nodejs20.x"
   lambda_zip_path     = "${path.module}/lambda/post_coffee.zip"
   dynamodb_table_name = module.dynamodb.table_name
   environment         = var.environment
@@ -44,7 +44,7 @@ module "lambda_put" {
   function_name       = "put_coffee"
   lambda_role_arn     = module.iam.lambda_role_arn
   lambda_handler      = "index.handler"
-  lambda_runtime      = "nodejs18.x"
+  lambda_runtime      = "nodejs20.x"
   lambda_zip_path     = "${path.module}/lambda/put_coffee.zip"
   dynamodb_table_name = module.dynamodb.table_name
   environment         = var.environment
@@ -56,7 +56,7 @@ module "lambda_delete" {
   function_name       = "delete_coffee"
   lambda_role_arn     = module.iam.lambda_role_arn
   lambda_handler      = "index.handler"
-  lambda_runtime      = "nodejs18.x"
+  lambda_runtime      = "nodejs20.x"
   lambda_zip_path     = "${path.module}/lambda/delete_coffee.zip"
   dynamodb_table_name = module.dynamodb.table_name
   environment         = var.environment
