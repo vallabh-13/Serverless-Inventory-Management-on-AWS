@@ -1,0 +1,14 @@
+aws_region           = "us-east-2"
+aws_account_id       = "23423xxxxx" - your account id
+environment          = "prod"
+project_name         = "coffee-inventory"
+dynamodb_table_name  = "coffee_inventory"
+lambda_role_name     = "coffee_lambda_exec_role"
+log_retention_days   = 14
+api_gateway_name     = "coffee-api"
+api_stage_name       = "prod"
+amplify_app_name     = "coffee-inventory-app"
+github_repo_url      = "https://github.com/your-github-username/Serverless-Inventory-Management-on-AWS"  # Update with your GitHub repo URL
+branch_name          = "main"
+frontend_path        = "D:/Terraform/Serverless-Inventory-Management-on-AWS/frontend" - your file path
+github_token         =  "ghp_Ky5vK9brU4k5upF6mwghkdhgmjjmdxxxxxxxxxx"   -  your github token
