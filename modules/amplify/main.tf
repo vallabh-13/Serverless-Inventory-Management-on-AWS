@@ -6,24 +6,26 @@ resource "aws_amplify_app" "frontend" {
   # OAuth token for GitHub access (if provided)
   access_token = var.github_token
 
-  # Build settings for React app
+  # Build settings for React app in frontend/ subdirectory
   build_spec = <<-EOT
     version: 1
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm install
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: build
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
+    applications:
+      - appRoot: frontend
+        frontend:
+          phases:
+            preBuild:
+              commands:
+                - npm ci
+            build:
+              commands:
+                - npm run build
+          artifacts:
+            baseDirectory: build
+            files:
+              - '**/*'
+          cache:
+            paths:
+              - node_modules/**/*
   EOT
 
   # Environment variables - API Gateway URL automatically injected
