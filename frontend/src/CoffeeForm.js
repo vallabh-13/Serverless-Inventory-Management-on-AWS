@@ -24,29 +24,31 @@ function CoffeeForm({ onAdd, onUpdate, selected }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "2rem" }}>
-      <input
-        type="text"
-        placeholder="Coffee Name"
-        value={coffee_name}
-        onChange={(e) => setCoffeeName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Price"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        step="0.01"
-      />
-      <input
-        type="text"
-        placeholder="Availability"
-        value={availability}
-        onChange={(e) => setAvailability(e.target.value)}
-      />
-      <button type="submit">{selected ? "Update" : "Add"} Coffee</button>
-    </form>
+    <div className="coffee-form">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Coffee Name"
+          value={coffee_name}
+          onChange={(e) => setCoffeeName(e.target.value)}
+          required
+        />
+        <input
+          type="number"
+          placeholder="Price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          step="0.01"
+        />
+        <input
+          type="text"
+          placeholder="Availability"
+          value={availability}
+          onChange={(e) => setAvailability(e.target.value)}
+        />
+        <button type="submit">{selected ? "Update" : "Add"} Coffee</button>
+      </form>
+    </div>
   );
 }
 
