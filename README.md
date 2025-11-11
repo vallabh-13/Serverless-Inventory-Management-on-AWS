@@ -1,4 +1,4 @@
-# ☕ Serverless Coffee Inventory Management on AWS (Cost Optimization & Serverless Architecture)
+# ☕ Serverless Inventory Management on AWS (Performance Efficiency Pillar)
 
 ## 📌 Project Overview
 
@@ -99,9 +99,9 @@ Serverless-Inventory-Management-on-AWS/
 GitHub Repo → AWS Amplify (CI/CD) → React App Deployment
                                    ↓
 User Request → CloudFront → API Gateway → Lambda Functions → DynamoDB
-                                              ↓
-                                        CloudWatch Logs
-```
+                                                           ↓
+                                                     CloudWatch Logs
+``` 
 
 ---
 
@@ -142,7 +142,7 @@ terraform apply -var-file="terraform.tfvars"
 
 ### ⚙️ Step 6: Update Frontend API Endpoint
 
-AWS Amplify will automatically rebuild and deploy.
+NOTE: AWS Amplify will automatically rebuild and deploy.
 
 After deployment, update the API endpoint in `frontend/src/api.js` for local testing:
 
